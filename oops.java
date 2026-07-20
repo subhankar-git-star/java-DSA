@@ -1,29 +1,38 @@
+public class OOPS{
 
-public class oops{
-    static class student{
-        String name;
-        int roll;
-        double per;
-        void setname(String newname){
-            name=newname;
-        }
-
-        void setroll(int newroll){
-            roll=newroll;
-        }
-
-        void setper (double newper){
-            per=newper;
-        }
-    }
     public static void main(String[] args) {
-        student s1=new student();
-        s1.setname("amanbiswas");
-        s1.setper(56.5);
-        s1.setroll(34);
-        System.out.println(s1.name);
-        System.out.println(s1.roll);
-        System.out.println(s1.per);
+       student s1=new student();
+       s1.name="subhankar";
+       s1.roll=45;
+       s1.password=3535;
+       student s2=new student(s1);
+       
 
     }
-} 
+}
+class student{
+    String name;
+    int roll;
+    int password;
+    int marks[];
+    student(){
+        marks=new int[3];
+        System.out.println("constructor is called");
+    }
+    // shallow copy constructure // copy constructure
+    student(student s1){
+        marks=new int[3];
+        this.name=s1.name;
+        this.roll=s1.roll;
+        this.marks=s1.marks;
+    }
+    student(String name){
+        marks=new int[3];
+        this.name=name;
+    }
+    student(int roll){
+        marks=new int[3];
+        this.roll=roll;
+    }
+    
+}

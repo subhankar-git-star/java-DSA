@@ -95,12 +95,23 @@ public class recursion{
         print(arr, si, mid);
         // print(arr, ei+1, ei);
         System.out.println(arr[mid]+"");
-        
-    
+    }
+    public static void dublication(String str,int idx,StringBuilder newstring,boolean map[]){
+        if(idx==str.length()){
+            System.out.println(newstring);
+            return;
+        }
+        char curr=str.charAt(idx);
+        if(map[curr-'a']==true){
+            dublication(str, idx+1, newstring, map);
+        }else{
+            map[curr-'a']=true;
+            dublication(str, idx+1, newstring.append(curr), map);
+        }
     }
     public static void main(String[] args) {
-       int arr[]={1,2,3,4,5,6,7};
-         print(arr, 0, arr.length-1);
+       String str="appnacollege";
+       dublication(str, 0, new StringBuilder(), new boolean[26]);
        
     }
 }

@@ -51,6 +51,22 @@ public class string{
             }
         }
     }
+
+    public static void dublication(String str,int idx,StringBuilder newstring,boolean map[]){
+        if(idx==str.length()){
+            System.out.println(newstring);
+            return;
+        }
+        char current=str.charAt(idx);
+        if(map[current-'a']==true){
+            dublication(str, idx+1, newstring, map);
+        }
+        else{
+            map[current-'a']=true;
+            dublication(str, idx+1, newstring.append(str), map);
+        }
+
+    }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("enter string");

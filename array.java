@@ -1,4 +1,11 @@
 public class array{
+
+  public static void print(int arr[]){
+        for(int i=0;i<arr.length;i++){
+            System.out.print(arr[i]+" ");
+        }System.out.println(" ");
+    }
+
   public static int binaryscarch(int number[],int key){
     int first=0;
     int last=number.length-1;
@@ -68,7 +75,7 @@ public class array{
 
         return trappedWater;
     }
-
+// pairs
  public static void paris(int number[]){
         int tp=0;
         for(int i=0;i<number.length;i++){
@@ -81,17 +88,17 @@ public class array{
     }
     
 }
-    public static void maxsum(int number[]){
-        int max=Integer.MIN_VALUE;
-        for(int i=0;i<number.length;i++){
-            for(int j=i;j<number.length;j++){
-                    int sum=0;
-                for (int k=i;k<=j;k++){
-                    sum=sum+number[k];
-                    System.out.print(number[k]+" ");
-                }if(max<sum){
-                    max=sum;
-                }
+  public static void maxsum(int number[]){
+    int max=Integer.MIN_VALUE;
+      for(int i=0;i<number.length;i++){
+        for(int j=i;j<number.length;j++){
+          int sum=0;
+          for (int k=i;k<=j;k++){
+            sum=sum+number[k];
+            System.out.print(number[k]+" ");
+            }if(max<sum){
+            max=sum;
+            }
               
                 
             }  
@@ -120,20 +127,82 @@ public class array{
       }
       return i+1;
     }
-  public static void main(String[]args){
-   int arr[]={1,1,2,3,3,5};
-   if(arr.length==0){
-    return;
-   }
-   int i=0;
-   for(int j=1;j<arr.length;j++){
-    if(arr[j]!=arr[i]){
-      i++;
-      arr[i]=arr[j];
+
+    //pairs of array
+    public static void pairs(int arr[]){
+      for(int i=0;i<arr.length-1;i++){
+        for(int j=i+1;j<arr.length;j++){
+           System.out.print("("+arr[i]+","+arr[j]+")");
+        }System.out.println("");
+      }
     }
-   }
-   for(int k=0;k<=i;k++){
-    System.out.println(arr[k]);
-   }
+
+     // sub array
+    public static void subarray(int arr[]){
+      for(int i=0;i<arr.length;i++){
+        for(int j=i;j<arr.length;j++){
+          for(int k=i;k<=j;k++){
+             System.out.print(arr[k]+" ");
+          }
+        }System.out.print("");
+      }System.out.println("");
+     }
+
+     //max subarray sum
+     public static int maxsubarraysum(int arr[]){
+      int max=Integer.MIN_VALUE;
+      int curr;
+      for(int i=0;i<arr.length;i++){
+        for(int j=i;j<arr.length;j++){
+          curr=0;
+          for(int k=i;k<=j;k++){
+           curr+=arr[k];
+          }
+          if(curr>max){
+            max=curr;
+          }
+        }
+      }
+      return max;
+     }
+
+     //prefix sum
+     public static int prefixsum(int arr[]){
+      int temp[]=new int[arr.length];
+      temp[0]=arr[0];
+      for(int i=1;i<arr.length;i++){
+        temp[i]=arr[i]+temp[i-1];
+      }
+      int max=Integer.MIN_VALUE;
+      int curr;
+      for(int i=0;i<arr.length;i++){
+        for(int j=i;j<arr.length;j++){
+          
+         curr=(i==0)?temp[j]:temp[j]-temp[i-1];
+         if(curr>max){
+          max=curr;
+        }
+        }
+        
+      }
+      return max;
+     }
+
+     //kadanas algotithm
+     public static void kadans(int arr[]){
+      int ms=Integer.MIN_VALUE;
+      int sum=0;
+      for(int i=0;i<arr.length;i++){
+        sum=sum+arr[i];
+        if(sum<0){
+          sum=0;
+        }
+        ms=Math.max(sum,ms);
+      }
+     System.out.println("the maximum sum is "+ms);
+     }
+  public static void main(String[]args){
+   int arr[]={1,2,4,3,5};
+   kadans(arr);
   }
 
