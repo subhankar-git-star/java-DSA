@@ -38,6 +38,8 @@ public class Stackcol2{
                 }
                 if(count<1){
                     return false;
+                }else{
+                    s.push(ch);
                 }
             }
         }
