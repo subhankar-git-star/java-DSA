@@ -1,4 +1,4 @@
-public class diagonal{
+public class Diagonal{
     public static int diagonal(int matrix[][]){
         int sum=0;
         // for(int i=0;i<matrix.length;i++){

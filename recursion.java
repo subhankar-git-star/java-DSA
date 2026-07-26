@@ -1,4 +1,4 @@
-public class recursion{
+public class Recursion{
     public static void rev(int number){
         if(number==1){
             System.out.println(1);

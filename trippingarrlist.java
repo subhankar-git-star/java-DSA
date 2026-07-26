@@ -1,7 +1,7 @@
 
 import java.util.ArrayList;
 
-public class trippingarrlist{
+public class Trippingarrlist{
     public static int getwater(ArrayList<Integer>hight){
         int maxwater=0;
         for(int i=0;i<hight.size();i++){

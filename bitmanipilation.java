@@ -1,4 +1,4 @@
-public class bitmanipilation{
+public class Bitmanipilation{
     public static int getbit(int i,int n){
         int Bitmask=1<<i;
         if((n&Bitmask)==0){

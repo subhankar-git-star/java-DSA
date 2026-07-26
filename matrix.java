@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-public class matrix{
+public class Matrix{
     // find maximum
     public static int maximum(int matrix[][]){
      int max=Integer.MIN_VALUE;

@@ -1,4 +1,4 @@
-public class backtraking{
+public class Backtraking{
     public static void back(int arr[],int si,int num){
         if(si==arr.length){
             print(arr);

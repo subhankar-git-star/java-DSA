@@ -1,5 +1,5 @@
-import java.util.Scanner;
-public class string{
+import java.util.*;
+public class String1{
     public static void pallindrome(String str){
         for(int i=0;i<str.length()/2;i++){
             if(str.charAt(i)!=str.charAt(str.length()-i-1)){
@@ -50,6 +50,7 @@ public class string{
                 sb.append(Character.toUpperCase(str.charAt(i)));
             }
         }
+        return sb.toString();
     }
 
     public static void dublication(String str,int idx,StringBuilder newstring,boolean map[]){

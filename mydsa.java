@@ -1,4 +1,4 @@
-public class mydsa {
+public class Mydsa {
 
     public static int[] total(int number[], int key) {
         for (int i = 0; i < number.length; i++) {
@@ -162,24 +162,8 @@ public static int[] findsum(int[] number,int key){
     }
     return new int[]{-1,-1};
 }
-public static int findlar(int matrix [][]){  
-}
 
 
-public int majorityElement(int[] nums) {
-    for(int i=0;i<nums.length-1;i++){
-        int freq=0;
-        for(int j=0;j<nums.length;j++){
-            if(nums[i]==nums[j]){
-                 freq++;
-            }
-        }
-        if(freq>nums.length/2){
-        return freq;
-        }
-        }
-    }
-    
 }
 public static void main(String[] args) {
 //    int matrix[][]= new int [3][3];

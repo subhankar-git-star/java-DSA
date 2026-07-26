@@ -1,4 +1,4 @@
- class baubleshort{
+ class Baubleshort{
     public static void shortarray(int number[]){
        for(int i=0;i<number.length-1;i++){
             for(int j=0;j<number.length-1-i;j++){

@@ -1,4 +1,4 @@
-public class sudoku{
+public class Sudoku{
 
     public static boolean issafe(int sudoku[][],int row ,int col,int digit){
     //row
