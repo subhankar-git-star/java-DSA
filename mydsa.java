@@ -169,8 +169,6 @@ public static void main(String[] args) {
 //    int matrix[][]= new int [3][3];
 //     Scanner sc=new Scanner(System.in);
 int arr[]={2,2,1,1,1,2,2};
-
-
 }
 
 
